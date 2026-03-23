@@ -5,21 +5,21 @@
 class UnraidTui < Formula
   desc "Terminal UI for monitoring and managing Unraid servers"
   homepage "https://github.com/Greite/unraid-tui"
-  version "0.4.1"
+  version "0.5.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Greite/unraid-tui/releases/download/v0.4.1/unraid-tui_0.4.1_darwin_amd64.tar.gz"
-      sha256 "870d8ec3738a48ca5b25c81616386d513145a6a902d97eabd31b88aebdd45810"
+      url "https://github.com/Greite/unraid-tui/releases/download/v0.5.0/unraid-tui_0.5.0_darwin_amd64.tar.gz"
+      sha256 "b67282257617b1f028f7592fa14992e1ead417a497a4b81473cf2877bd67a40d"
 
       define_method(:install) do
         bin.install "unraid-tui"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Greite/unraid-tui/releases/download/v0.4.1/unraid-tui_0.4.1_darwin_arm64.tar.gz"
-      sha256 "e91c42a062a4a19e9e59bcfe06e8c5cdb07c3f5b479a1aa45dbe88bca3ef98a6"
+      url "https://github.com/Greite/unraid-tui/releases/download/v0.5.0/unraid-tui_0.5.0_darwin_arm64.tar.gz"
+      sha256 "79198c2cd60c8620f5765e1118a545afa297084844627324f9818571a72bf1d7"
 
       define_method(:install) do
         bin.install "unraid-tui"
@@ -29,15 +29,15 @@ class UnraidTui < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Greite/unraid-tui/releases/download/v0.4.1/unraid-tui_0.4.1_linux_amd64.tar.gz"
-      sha256 "85eb2442e1cee9a59d72a34765b06c836c1d2ba2ab9d1b2a956659279f55c019"
+      url "https://github.com/Greite/unraid-tui/releases/download/v0.5.0/unraid-tui_0.5.0_linux_amd64.tar.gz"
+      sha256 "d7f0a66fd3c657e3fc0b1867c74722da88de74d04c8b952a84ce014c70d34a51"
       define_method(:install) do
         bin.install "unraid-tui"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Greite/unraid-tui/releases/download/v0.4.1/unraid-tui_0.4.1_linux_arm64.tar.gz"
-      sha256 "b1bc6c2b0d41b9a456e0ab4317669983d4d03d9d867e023742835bfea76bfc42"
+      url "https://github.com/Greite/unraid-tui/releases/download/v0.5.0/unraid-tui_0.5.0_linux_arm64.tar.gz"
+      sha256 "e414d1c24121bddb5a69eeb5da5226ce30bbb8837871e2a4e0931c357ab17783"
       define_method(:install) do
         bin.install "unraid-tui"
       end
